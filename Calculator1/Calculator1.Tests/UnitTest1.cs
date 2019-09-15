@@ -19,5 +19,36 @@ namespace Calculator1.Tests
             // Assert
             Assert.Equal(expectedOutput, output);
         }
+
+        [Fact]
+        public void TestMultiply()
+        {
+            // Arrange
+            var calculator = new MyCalculator();
+            decimal input1 = 3, input2 = 4, expectedOutput = 12; // need to know in advance what it is supposed to do
+            
+            // Act
+            var output = calculator.Multiply(input1, input2);
+
+            // Assert
+            Assert.Equal(expectedOutput, output);
+
+        }
+
+        [Fact]
+        public void TestSquare()
+        {
+            // Arrange
+            var calculator = new MyCalculator();
+            decimal input1 = 3, expectedOutput = 9; // need to know in advance what it is supposed to do
+
+            // Act
+            var output = calculator.Square(input1);
+
+            // Assert
+            Assert.Equal(expectedOutput, output);
+
+
+        }
     }
 }
